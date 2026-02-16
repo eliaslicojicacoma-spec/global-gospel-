@@ -98,6 +98,22 @@
 </footer>
 
 <script src="script.js"></script>
+    <div id="chat-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <button id="chat-button" style="background: #fdbb2d; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+        🤖
+    </button>
+    <div id="chat-window" style="display: none; background: white; width: 280px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin-bottom: 10px; overflow: hidden; font-family: sans-serif;">
+        <div style="background: #1a2a6c; color: white; padding: 15px; font-weight: bold;">Assistente Elias Licoji</div>
+        <div id="chat-content" style="padding: 15px; color: #333; height: 200px; overflow-y: auto; font-size: 14px;">
+            Olá! Sou o assistente do Elias. Como posso ajudar no seu estudo bíblico hoje?
+        </div>
+        <div style="padding: 10px; border-top: 1px solid #eee; display: flex; gap: 5px; flex-wrap: wrap;">
+            <button onclick="responder('manual')" style="font-size: 11px; cursor: pointer;">📖 Manual</button>
+            <button onclick="responder('licao')" style="font-size: 11px; cursor: pointer;">📝 Lição</button>
+            <button onclick="responder('biblia')" style="font-size: 11px; cursor: pointer;">📜 Bíblia</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 
