@@ -39,4 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Log de Boas-vindas Profissional
     console.log("%c Global Gospel - Ativo ", "color: white; background: #1a2a6c; font-weight: bold; padding: 5px; border-radius: 3px;");
 });
+const chatBtn = document.getElementById('chat-button');
+const chatWin = document.getElementById('chat-window');
+const chatContent = document.getElementById('chat-content');
+
+chatBtn.addEventListener('click', () => {
+    chatWin.style.display = chatWin.style.display === 'none' ? 'block' : 'none';
+});
+
+function responder(tipo) {
+    if(tipo === 'manual') {
+        chatContent.innerHTML = "Pode descarregar o <b>Manual da Igreja</b> na secção de Recursos abaixo!";
+    } else if(tipo === 'licao') {
+        chatContent.innerHTML = "A <b>Lição da Escola Sabatina</b> está disponível no segundo cartão da biblioteca!";
+    } else if(tipo === 'biblia') {
+        chatContent.innerHTML = "Pode ler as <b>Escrituras Sagradas</b> diretamente no nosso leitor central!";
+    }
+}
 
